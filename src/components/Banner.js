@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import ParticlesComponent from "./particles";
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -49,6 +50,9 @@ export const Banner = () => {
 
   return (
     <section className="banner" id="home">
+      <div className="animation">
+        <ParticlesComponent id="particles" />
+      </div>
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
