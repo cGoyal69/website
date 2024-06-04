@@ -16,6 +16,12 @@
 }
 
 /************ Default Css ************/
+.chart{
+  width: 160px;
+  height: 160px;
+  margin-left: 5vw;
+}
+
 * {
   margin: 0;
   padding: 0;
