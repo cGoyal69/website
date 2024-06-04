@@ -164,7 +164,7 @@ export const Skills = () => {
                             </div>
 							<div className="item">
                                 <div>
-							  <Doughnut data={data4} options={options} />
+							  <Doughnut data={data5} options={options} />
                               </div>
 							  <h6 className='chartlabel'>Documentation</h6>
                             </div>

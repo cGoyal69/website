@@ -1,24 +1,16 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Banner } from './components/Banner';
-import { NavBar } from './components/Navbar';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
-import { Footer } from './components/Footer';
+// src/App.js
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import PdfViewer from './components/PdfViewer';
+import MyApp from './components/MyApp';
 
-function App() {
-  return (
-    <div className="App">
-
-      <NavBar />
-      <Banner />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
-    </div>
-  );
-}
+const App = () => {
+    return (
+            <Routes>
+                <Route path="/" element={<MyApp />} />
+                <Route path="/resume" element={<PdfViewer fileUrl={`${process.env.PUBLIC_URL}/resume.pdf`} />} />
+            </Routes>
+    );
+};
 
 export default App;
