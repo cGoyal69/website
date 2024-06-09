@@ -29,7 +29,7 @@ export const Skills = () => {
     datasets: [
       {
         label: 'MERN Stack',
-        data: [95,5],
+        data: [80,20],
         backgroundColor: [
           '#9900FF',
           '#000000',
