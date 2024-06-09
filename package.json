@@ -13,6 +13,7 @@
     "@tsparticles/basic": "^3.4.0",
     "@tsparticles/react": "^3.0.0",
     "animate.css": "^4.1.1",
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.3",
     "chart.js": "^4.4.3",
     "chartjs-plugin-datalabels": "^2.2.0",

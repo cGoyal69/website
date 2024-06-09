@@ -1,29 +1,27 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const emailRoutes = require("./routes/emailRoutes");
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const sendMail = require('./mailer'); // Import the sendMail function
 
 const app = express();
-dotenv.config();
 
-const cors = require("cors");
-const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
 
-app.use(cors()); // Use this after the variable declaration
-
-app.use(express.json()); // tell the server to accept the json data from frontend
-
-//Signup and login
-app.use("/email", emailRoutes);
-
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+// POST endpoint for handling contact form submissions
+app.post('/contact', async (req, res) => {
+  try {
+    // Send email
+    await sendMail(req.body);
+    res.json({ code: 200, message: 'Message sent successfully' });
+  } catch (error) {
+    console.error('Error sending email:', error);
+    res.status(500).json({ code: 500, message: 'Failed to send message' });
+  }
 });
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 9696;
 app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
