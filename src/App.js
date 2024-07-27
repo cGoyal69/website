@@ -7,7 +7,7 @@ import MyApp from './components/MyApp';
 const App = () => {
     return (
             <Routes>
-                <Route path="/website" element={<MyApp />} />
+                <Route element={<MyApp/>} basename={process.env.PUBLIC_URL}/>
                 <Route path="/resume" element={<PdfViewer fileUrl={`${process.env.PUBLIC_URL}/resume.pdf`} />} />
             </Routes>
     );
