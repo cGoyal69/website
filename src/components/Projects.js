@@ -11,9 +11,10 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "College Student Portal",
+      description: "Student portal for their daily needs.",
       imgUrl: projImg1,
+      link: "https://github.com/cGoyal69/College-Portal/tree/master/react/my-app",
     },
     {
       title: "Business Startup",
@@ -59,9 +60,6 @@ export const Projects = () => {
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Tab 2</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
