@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import PdfViewer from './components/PdfViewer';
+import PdfViewer from './components/pdfViewer';
 import MyApp from './components/MyApp';
 
 const App = () => {
