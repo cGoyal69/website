@@ -22,6 +22,8 @@ app.post('/contact', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 9696;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on http://0.0.0.0:${PORT}`);
+  console.log('Access this app on your local network using your system\'s local IP address:');
+  console.log(`Example: http://192.168.29.110:${PORT}`);
 });
