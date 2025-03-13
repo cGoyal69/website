@@ -11,6 +11,7 @@ export const Projects = () => {
 
   const projects = [
     {
+      
       title: "College Student Portal",
       description: "Student portal for their daily needs.",
       imgUrl: projImg1,
